@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 1023345928
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 5671c0132e06d2cf80c96a31968d6464
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 765c74907cdb8a7ca7d8112962a4f3a9
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 89
+  Script: {instanceID: 0}
+Assets:
+- Assets/_BundleResources/Model/Materials/fuhao.mat
+Dependencies:
+- Assets/_AssetBundles/Android/model/jiahao.fbm/fuhao

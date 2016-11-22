@@ -1,0 +1,46 @@
+ManifestFileVersion: 0
+CRC: 4216862961
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 617931a175bd33aae9834d254720a309
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9dea23ffc7e96552740e12d1ee5309d8
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/_BundleResources/UI/Common/File-000243_64.png
+- Assets/_BundleResources/UI/Common/File-000243_71.png
+- Assets/_BundleResources/UI/Common/File-000243_10.png
+- Assets/_BundleResources/UI/Common/File-000243_14-09.png
+- Assets/_BundleResources/UI/Common/File-000243_15.png
+- Assets/_BundleResources/UI/Common/File-000243_96.png
+- Assets/_BundleResources/UI/Common/File-000243_23.png
+- Assets/_BundleResources/UI/Common/File-000243_90.png
+- Assets/_BundleResources/UI/Common/File-000243_23-18.png
+- Assets/_BundleResources/UI/Common/File-000243_13.png
+- Assets/_BundleResources/UI/Common/File-000243_19.png
+- Assets/_BundleResources/UI/Common/File-000243_14.png
+- Assets/_BundleResources/UI/Common/File-000034_03.png
+- Assets/_BundleResources/UI/Common/File-000243_49.png
+- Assets/_BundleResources/UI/Common/File-000243_103.png
+- Assets/_BundleResources/UI/Common/File-000243_93.png
+- Assets/_BundleResources/UI/Common/File-000243_32.png
+- Assets/_BundleResources/UI/Common/File-000243_39.png
+- Assets/_BundleResources/UI/Common/File-000243_24.png
+- Assets/_BundleResources/UI/Common/File-000243_76.png
+- Assets/_BundleResources/UI/Common/File-000243_18.png
+- Assets/_BundleResources/UI/Common/File-000243_41.png
+- Assets/_BundleResources/UI/Common/File-000055_03.png
+- Assets/_BundleResources/UI/Common/File-000243_78.png
+- Assets/_BundleResources/UI/Common/File-000243_67.png
+- Assets/_BundleResources/UI/Common/File-000243_53.png
+- Assets/_BundleResources/UI/Common/File-000243_81.png
+- Assets/_BundleResources/UI/Common/File-000243_06.png
+- Assets/_BundleResources/UI/Common/File-000243_56.png
+Dependencies: []

@@ -1,0 +1,27 @@
+﻿using UnityEngine;
+using System.Collections;
+
+namespace Unity_lt_net
+{
+
+public class NetMessage {
+
+	public byte[] data;
+
+	public static NetMessage create(byte[] data)
+	{
+		NetMessage message = new NetMessage ();
+		message.data = data;
+		return message;
+	}
+
+	public void expandInt(int value)
+	{
+		ByteArray ba = new ByteArray ();
+		ba.writeInt (value);
+		ba.writeByteArray (data);
+		data = ba.getActualData ();
+	}
+}
+
+}

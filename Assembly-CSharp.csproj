@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{638980C8-3A86-DE8C-B6B8-0C46A13A1589}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_4_2;UNITY_5_4;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EDITOR_RETINA;ENABLE_RETINA_GUISTYLES;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_IL2CPP;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE;CROSS_PLATFORM_INPUT;MOBILE_INPUT</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\AdvancedExamples\AutoSelect\MultiLayerTouch.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\AdvancedExamples\AutoSelect\MultiLayerUI.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\AdvancedExamples\MultiCamera\MultiCameraTouch.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\AdvancedExamples\MultiCamera\MultiCameraUI.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\GameExemple\RTSExample\CubeSelect.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\GameExemple\RTSExample\RTSCamera.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\GameExemple\RunBall\Ball.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\GameExemple\RunBall\BallRunPlayer.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\GameExemple\RunBall\ThirdPersonCamera.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\LoadExamples.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\SimpleExamples\MultiFinger\FingerTouch.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\SimpleExamples\MultiFinger\MutliFingersScreenTouch.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\SimpleExamples\OneFinger\DoubleTapMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\SimpleExamples\OneFinger\DragMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\SimpleExamples\OneFinger\LongTapMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\SimpleExamples\OneFinger\Swipe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\SimpleExamples\OneFinger\TapMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\SimpleExamples\OneFinger\TouchMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\SimpleExamples\TwoFingers\PinchMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\SimpleExamples\TwoFingers\TooglePickMethodUI.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\SimpleExamples\TwoFingers\TwistMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\SimpleExamples\TwoFingers\TwoDoubleTapMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\SimpleExamples\TwoFingers\TwoDragMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\SimpleExamples\TwoFingers\TwoLongTapMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\SimpleExamples\TwoFingers\TwoSwipe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\SimpleExamples\TwoFingers\TwoTapMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\SimpleExamples\TwoFingers\TwoTouchMe.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\UnityUI\UICompatibility\ETWindow.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\UnityUI\UICompatibility\GlobalEasyTouchEvent.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\UnityUI\UICompatibility\UICompatibility.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\UnityUI\UICompatibility\UIWindow.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\UnityUI\UITwistPinch\UIDrag.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\UnityUI\UITwistPinch\UIPinch.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Example\UnityUI\UITwistPinch\UITwist.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\BaseFinger.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Component\EasyTouchTrigger.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\ECamera.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\EasyTouch.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\EasyTouchInput.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Finger.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Gesture.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\TwoFingerGesture.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Button-Event-Input\ButtonInputUI.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\Button-Event-Input\ButtonUIEvent.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\ControlEventInput\ControlUIEvent.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\ControlEventInput\ControlUIInput.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\DPadClassicalTime\DPadParameterUI.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\FPSExample\FPSPlayerControl.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\FPSExample\ImpactEffect.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\JoystickParameter\AxisXUi.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\LoadLevelScript.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\TouchPad-Event-Input\TouchPadUIEvent.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Examples\_Medias\SliderText.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ComponentExtensions.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCArea.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCAxis.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCBase.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCButton.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCDPad.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCInput.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCJoystick.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCSingleton.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCTouchPad.cs" />
+     <Compile Include="Assets\_Effect\hudun\Scripts\Effect\JubianUvAnimation.cs" />
+     <Compile Include="Assets\_Project\Scripts\Constant.cs" />
+     <Compile Include="Assets\_Project\Scripts\DefiniInfo.cs" />
+     <Compile Include="Assets\_Project\Scripts\ErrorCode.cs" />
+     <Compile Include="Assets\_Project\Scripts\GameManager.cs" />
+     <Compile Include="Assets\_Project\Scripts\LoadResources\Bins\BinsSetting.cs" />
+     <Compile Include="Assets\_Project\Scripts\LoadResources\Bins\Data\EffectData.cs" />
+     <Compile Include="Assets\_Project\Scripts\LoadResources\Bins\Data\ItemData.cs" />
+     <Compile Include="Assets\_Project\Scripts\LoadResources\Bins\Data\SkillData.cs" />
+     <Compile Include="Assets\_Project\Scripts\LoadResources\Bins\Data\TextData.cs" />
+     <Compile Include="Assets\_Project\Scripts\LoadResources\Bins\PropertyReader.cs" />
+     <Compile Include="Assets\_Project\Scripts\LoadResources\Json\ServersReturnJson.cs" />
+     <Compile Include="Assets\_Project\Scripts\LoadResources\Json\VerifyReturnJson.cs" />
+     <Compile Include="Assets\_Project\Scripts\LoadResources\StreamingAssetsCopySetting.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Handler\Base\BaseHandler.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Handler\LoadResourceHandler.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Handler\LoginHandler.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Handler\MainHandler.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Handler\PlayerHandler.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Handler\StartHandler.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Handler\TransitionHandler.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\MessageDispather.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_AchieveItem.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_AddItem.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_AddPlayer.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_BeginGame.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_BoatQuote.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_BoatQuoteOver.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_ChangeMaxSpeed.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_ChangeSpeed.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_CreateWater.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_DisConnect.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_EnterScene.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_ErrorCode.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_GameOver.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_ItemTouchPlayer.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_Login.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_LoginReturn.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_MoveToClient.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_MoveToServer.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_PlayerExitScene.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_RemoveItem.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_SceneException.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_SelectSkillBoat.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_SkillEffect.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_TouchBoat.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_TouchItem.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_Transition.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_UseItem.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_UseItemReturn.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_UseSkill.cs" />
+     <Compile Include="Assets\_Project\Scripts\LocalService\Messages\Message_UseSkillReturn.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\BaseScene.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\Boat\BoatColliderControl.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\Boat\BoatControl.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\Boat\BoatEffect\BoatFlashControl.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\GameScene.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\GameUI.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\Item\ItemUIControl.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\Item\PathItem.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\Item\UseItem.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\Map\MapUI.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\Skill\SearchAheadTarget.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\Skill\SearchNearTarget.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\Skill\SearchSelf.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\Skill\SearchTarget.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\Skill\SkillControl.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\Skill\SkillRelease.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\Skill\SkillUI.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\Skill\Skill_1001.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\Skill\Skill_1002.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\Skill\Skill_1003.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\Skill\Skill_1004.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\Skill\Skill_1005.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\Skill\Skill_1006.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\GameScene\Skill\Skill_1007.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\LoadResourceScene.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\LoginScene.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\MainScene.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\MainScene\QueueTipsControl.cs" />
+     <Compile Include="Assets\_Project\Scripts\Scene\TransitionScene.cs" />
+     <Compile Include="Assets\_Project\Scripts\UI\Skill\BoatSkillItemPanel.cs" />
+     <Compile Include="Assets\_Project\Scripts\UI\Skill\BoatSkillMenuPanel.cs" />
+     <Compile Include="Assets\_Project\Scripts\UserInfo.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\AssetBundleManager.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\EditorProperty\SeparateProperty.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\FileUtil.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\NetService\Framework\BaseNetHandler.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\NetService\Framework\ByteArray.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\NetService\Framework\DefiniInfo.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\NetService\Framework\HttpService.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\NetService\Framework\NetMessage.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\NetService\Framework\NetMessageDispatcherComponent.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\NetService\Framework\NetMessageDispatcherForUnity.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\NetService\Framework\TCPHandler.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\NetService\Handler\MoveNetHandler.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\NetService\Handler\NetHandler.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\NetService\Handler\PlayerNetHandler.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\NetService\Handler\QueueNetHandler.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\NetService\Handler\SkillSelectNetHandler.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\NetService\Handler\TickNetHandler.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\NetService\Handler\UserNetHandler.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\OnRenderImage\Blur_radial.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\ParticleScaler.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\PlatformUtil.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\ResourcesUtil.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\Rotate\BoatQuote.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\Rotate\LightRotate.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\Rotate\RotateRound.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\Rotate\RotateRound_v2.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\Rotate\RotateRound_v3.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\Rotate\RotateRound_v4.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\Rotate\RotateSelf.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\Rotate\RotateSelf_v2.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\SceneTool\BaseCollider.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\SceneTool\Circle_Scale.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\SceneTool\DrawBoundary.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\SceneTool\DrawGizmos.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\SceneTool\Float.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\SceneTool\FloatControl.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\SceneTool\FollowTarget_V2.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\SceneTool\GravityEvent.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\SceneTool\MoveByAxis.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\SceneTool\MoveToPositionByAxis.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\SceneTool\MoveToTargetByAxis.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\SceneTool\SM_UVScroller.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\SceneTool\TweenScale_Destory.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\SceneView2GameView.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\StringUtil.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\UGUI\ETCJoystickTransition.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\UGUI\FontGradient.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\UGUI\PopWindow.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\UGUI\SpiriteAnimation.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\UGUI\Tween\TweenAlpha.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\UGUI\Tween\TweenAplhaCircle.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\UGUI\Tween\TweenImageFillAmount.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\UGUI\Tween\TweenPosition.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\UGUI\Tween\TweenScale.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\UGUI\UGUIEventListener.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\Util.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\WorkWithShader\ColorCircle.cs" />
+     <Compile Include="Assets\_Project\Scripts\Util\WorkWithShader\FlashLight.cs" />
+     <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
+     <None Include="Assets\_Project\Shaders\Custom_HeatDistort.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
+     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ShowAlphaChannel.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SunShaftsComposite.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceRaytrace.cginc" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\VignetteShader.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
+     <None Include="Assets\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularSmooth.shader" />
+     <None Include="Assets\Standard Assets\Effects\Projectors\Guidelines.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlur.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\RadialBlur.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ContrastComposite.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\FisheyeShader.shader" />
+     <None Include="Assets\EasyTouchBundle\EasyTouchControls\ReleaseNotes.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Apply.shader" />
+     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
+     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
+     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfField34.shader" />
+     <None Include="Assets\_Project\Shaders\Custom_Toon_Basic_Transparent.shader" />
+     <None Include="Assets\EasyTouchBundle\Readme.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SSAOShader.shader" />
+     <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ConvertDepth.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurvesSimple.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderYUV.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CreaseApply.shader" />
+     <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
+     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
+     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
+     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Luminance.shader" />
+     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionSelective.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\Bokeh34.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlurDX11.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
+     <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlur.shader" />
+     <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\DLAA.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrainDX11.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableBlur.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlurClear.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionEffect.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\GrayscaleEffect.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SepiaToneEffect.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\TwirlEffect.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VortexEffect.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Adaptation.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrain.shader" />
+     <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VignettingShader.shader" />
+     <None Include="Assets\EasyTouchBundle\EasyTouchControls\Readme.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
+     <None Include="Assets\EasyTouchBundle\EasyTouch\RealseNotes.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrection3DLut.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\EdgeDetectNormals.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\PrepareSunShaftsBlur.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\Blend.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
+     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
+     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SimpleClear.shader" />
+     <None Include="Assets\_Project\Shaders\Custom_Toon_Basic_Flash_Rim_Outline.shader" />
+     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
+     <None Include="Assets\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularDisplacement.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA3Console.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+ <Reference Include="Assembly-UnityScript-firstpass">
+ <HintPath>/Users/zhangjing/Documents/项目资料/讯灵牧场/Farm/boat/Boat/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="GameLogger">
+ <HintPath>/Users/zhangjing/Documents/项目资料/讯灵牧场/Farm/boat/Boat/Assets/_Project/Plugins/GameLogger.dll</HintPath>
+ </Reference>
+ <Reference Include="ICSharpCode.SharpZipLib">
+ <HintPath>/Users/zhangjing/Documents/项目资料/讯灵牧场/Farm/boat/Boat/Assets/_Project/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{4001DA94-A0F8-3CDE-9570-53684EBBCEC1}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

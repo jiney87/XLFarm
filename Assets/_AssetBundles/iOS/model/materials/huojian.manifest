@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 2514681547
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 5f4bba69fbe175234058fe169d91d297
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 765c74907cdb8a7ca7d8112962a4f3a9
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 89
+  Script: {instanceID: 0}
+Assets:
+- Assets/_BundleResources/Model/Materials/huojian.mat
+Dependencies:
+- Assets/_AssetBundles/iOS/model/huojian.fbm/huojian

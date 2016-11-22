@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 1969442244
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 7be6b9998b89c57a7a78ad21e77f1aae
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 765c74907cdb8a7ca7d8112962a4f3a9
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 89
+  Script: {instanceID: 0}
+Assets:
+- Assets/_BundleResources/Model/Materials/fuhao.mat
+Dependencies:
+- Assets/_AssetBundles/iOS/model/jiahao.fbm/fuhao

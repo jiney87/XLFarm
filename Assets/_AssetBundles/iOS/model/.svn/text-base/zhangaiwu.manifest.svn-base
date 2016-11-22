@@ -1,0 +1,27 @@
+ManifestFileVersion: 0
+CRC: 4115807827
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 7cc57abc4feaf72d6d0af06dfe902539
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f47d2e78a642f6f4f52d67f76b4957c4
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+Assets:
+- Assets/_BundleResources/Model/zhangaiwu.FBX
+Dependencies:
+- Assets/_AssetBundles/iOS/model/materials/zhangaiwu

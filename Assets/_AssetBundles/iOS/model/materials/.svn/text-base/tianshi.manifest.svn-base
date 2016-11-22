@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 1321962341
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a37a148289b476d2698f1ead85efa05e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 765c74907cdb8a7ca7d8112962a4f3a9
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 89
+  Script: {instanceID: 0}
+Assets:
+- Assets/_BundleResources/Model/Materials/tianshi.mat
+Dependencies:
+- Assets/_AssetBundles/iOS/model/tianshi.fbm/tianshi

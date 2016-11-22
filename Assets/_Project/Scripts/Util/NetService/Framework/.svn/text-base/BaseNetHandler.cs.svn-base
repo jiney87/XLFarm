@@ -1,0 +1,44 @@
+﻿using UnityEngine;
+using System.Collections;
+
+namespace Unity_lt_net
+{
+
+	public abstract class BaseNetHandler : NetMessageDispatcherComponent{
+
+		public void processMessage (byte[] msg)
+		{
+			ByteArray ba = new ByteArray (msg);
+			int command = ba.readInt ();
+			command = getToServerCommand (command);
+			ByteArray data = new ByteArray (ba.readByteArray (msg.Length - ByteArray.INT_SIZE));
+			processCommand (command, data);
+		}
+		
+		protected abstract void processCommand (int command, ByteArray data);
+		public abstract void update (float deltaTime);
+
+		private int getToServerCommand(int command)
+		{
+			return 0x0000FFFF&command;
+		}
+
+		private int getToClientCommand(int command)
+		{
+			int type = MsgDispatcher.getHandlerType (this);
+			return (type << 16) | command;
+		}
+
+		protected void sendMessage(int command,ByteArray temp)
+		{
+			command = getToClientCommand (command);
+			ByteArray ba = new ByteArray ();
+			ba.writeInt (command);
+			if (temp != null) {
+				ba.writeByteArray (temp.getActualData ());
+			}
+			MsgDispatcher.sendMessage (NetMessage.create (ba.getActualData ()));
+		}
+	}
+
+}

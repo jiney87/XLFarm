@@ -1,0 +1,40 @@
+﻿using UnityEngine;
+using System.Collections.Generic;
+
+public class MapUI : MonoBehaviour {
+
+	private Dictionary<BoatControl,GameObject> points = new Dictionary<BoatControl, GameObject> ();
+	private float minX = -140;
+	private float maxX = 140;
+	private float maxZ = 40;
+	private float minZ = -40;
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		foreach (KeyValuePair<BoatControl,GameObject> pair in points) {
+			movePoint (pair.Key);
+		}
+	}
+
+	public void loadPoint(BoatControl boatPos)
+	{
+		GameObject pointGo = ResourcesUtil.loadMapPoint (boatPos.isEnemy);
+		Util.AddChild (pointGo, gameObject);
+		Util.resetTransform (pointGo.transform);
+
+		points.Add (boatPos, pointGo);
+	}
+
+	private void movePoint(BoatControl boatPos)
+	{
+		float xPercent = boatPos.Xpercent;
+		float zPercent = boatPos.Zpercent;
+		GameObject pointGo = points [boatPos];
+		pointGo.transform.localPosition = new Vector3 (Mathf.Lerp (minX, maxX, zPercent), Mathf.Lerp (maxZ, minZ, xPercent), 0);
+	}
+}

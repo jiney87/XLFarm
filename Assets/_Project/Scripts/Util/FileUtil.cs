@@ -1,0 +1,348 @@
+﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using System.Reflection;
+using System;
+using System.IO;
+using System.Threading;
+using System.Text;
+using Unity_lt_net;
+
+public class FileUtil  {
+	
+	public const char CHAR_VARS_START=';';
+	public const char CHAR_COMMENT_START = '/';
+
+	public static void deleteFile(string filePath)
+	{
+		if(File.Exists(filePath))
+		{
+			File.Delete (filePath);
+		}
+	}
+
+	public static void readResManager(string filePath,out List<string> fileNames,out List<string> fileRivisions,out List<string> fileSizes)
+	{
+		fileNames=new List<string>();
+		fileRivisions=new List<string>();
+		fileSizes=new List<string>();
+
+		if(!File.Exists(filePath))
+		{
+			return;
+		}
+		FileStream fs=new FileStream(filePath,FileMode.Open);
+		byte[] bs=new byte[fs.Length];
+		fs.Seek(0,SeekOrigin.Begin);
+		fs.Read(bs,0,bs.Length);
+		fs.Close();
+		ByteArray ba = new ByteArray(bs);
+		int rows = ba.readInt();
+		int cols = ba.readInt();
+		for(int i=0;i<rows;i++)
+		{
+			string fileName = ba.readUTF ().Trim ();
+			string fileVersion = ba.readUTF ().Trim ();
+			string fileSize = ba.readUTF ().Trim ();
+
+			fileNames.Add (fileName);
+			fileRivisions.Add (fileVersion);
+			fileSizes.Add (fileSize);
+		}
+	}
+
+	//读资源文件对应的版本文件
+	public static string readResourceVersionFile(string filePath)
+	{
+		filePath += ".version";
+		if(!File.Exists(filePath))
+		{
+			return "";
+		}
+		FileStream fs = new FileStream (filePath, FileMode.Open);
+		byte[] bs=new byte[fs.Length];
+		fs.Seek(0,SeekOrigin.Begin);
+		fs.Read(bs,0,bs.Length);
+		fs.Close();
+
+		return Encoding.UTF8.GetString (bs);
+	}
+
+	//写资源文件对应的版本文件
+	public static void writeResourceVersionFile(string filePath,string fileRivision)
+	{
+		filePath += ".version";
+
+		//文件存放目标路径
+		int index = filePath.LastIndexOf ("/");
+		string path = filePath.Substring (0, index);
+
+		if (Directory.Exists (path)) {
+			clearSameName (filePath);
+		} else {
+			Directory.CreateDirectory (path);
+			GameLogger.Log ("创建路径:" + path, Color.yellow);
+		}
+
+		byte[] bs = Encoding.UTF8.GetBytes (fileRivision);
+
+		using (FileStream fs = new FileStream (filePath, FileMode.Create)) {
+			fs.Seek(0,SeekOrigin.Begin);
+			fs.Write(bs,0,bs.Length);
+			fs.Close();
+		}
+	}
+
+	public static long getFileSize(string filePath)
+	{
+		if(!File.Exists(filePath))
+		{
+			return 0;
+		}
+		long size=0;
+		FileInfo fi=new FileInfo(filePath);
+		size=fi.Length;
+		return size;
+	}
+	
+	public static void readBinFile1(string filename,Type type)
+	{
+		FileStream fs=new FileStream(filename,FileMode.Open);
+		byte[] bs=new byte[fs.Length];
+		fs.Seek(0,SeekOrigin.Begin);
+		fs.Read(bs,0,bs.Length);
+		fs.Close();
+		//解密
+		byte[] b2 = new byte[bs.Length];
+		for(int k=0;k<b2.Length;k++)
+		{
+			b2[k] = (byte)(~(bs[k]-8) & 0xFF);
+		}
+		ByteArray ba = new ByteArray(b2);
+		int rows = ba.readInt();
+		int cols = ba.readInt();
+		string[] fieldNames=null;
+		for(int i=0;i<rows;i++)
+		{
+			string[] strs = new string[cols];
+			for(int j=0;j<cols;j++)
+			{
+				strs[j] = ba.readUTF();
+			}
+			if(strs[0].Trim().Length==0)
+			{
+				break;
+			}
+			else if(strs[0][0] == CHAR_COMMENT_START)
+			{
+				continue;
+			} 
+			else if(strs[0][0] == CHAR_VARS_START)
+			{
+				strs[0]=strs[0].Substring(1);
+				fieldNames=strs;
+			}
+			else 
+			{
+			    object	obj = Activator.CreateInstance(type);
+				PropertyReader pro=(PropertyReader)obj;
+				for(int m=0;m<fieldNames.Length;m++)
+				{
+					PropertyInfo field=type.GetProperty(fieldNames[m]);
+					if(field == null)
+					{
+						Debug.Log("fieldNames[m]:" + fieldNames[m]);
+						Debug.Log("row:" + i);
+						Debug.Log("col:" + m);
+						Debug.Log("filename:"+filename);
+					}
+					if(field.PropertyType==typeof(int))
+					{
+						field.SetValue(pro,StringUtil.getInt(strs[m]),null);
+					}
+					else if(field.PropertyType==typeof(float))
+					{
+						field.SetValue(pro,StringUtil.getFloat(strs[m]),null);
+					}
+					else if(field.PropertyType==typeof(double))
+					{
+						field.SetValue(pro,StringUtil.getDouble(strs[m]),null);
+					}
+					else
+					{
+						field.SetValue(pro,strs[m],null);
+					}
+				}
+				pro.addData();
+			}
+		}
+	}
+	
+	public static void readBinFile2(string filename,Type type)
+	{
+		FileStream fs=new FileStream(filename,FileMode.Open);
+		byte[] bs=new byte[fs.Length];
+		fs.Seek(0,SeekOrigin.Begin);
+		fs.Read(bs,0,bs.Length);
+		fs.Close();
+		//解密
+		byte[] b2 = new byte[bs.Length];
+		for(int k=0;k<b2.Length;k++)
+		{
+			b2[k] = (byte)(~(bs[k]-8) & 0xFF);
+		}
+		ByteArray ba = new ByteArray(b2);
+		int rows = ba.readInt();
+		int cols = ba.readInt();	
+		for(int i=0;i<rows;i++)
+		{
+			string[] strs = new string[cols];
+			for(int j=0;j<cols;j++)
+			{
+				strs[j] = ba.readUTF();
+			}
+			if(strs[0].Trim().Length==0)
+			{
+				break;
+			}
+			else if(strs[0][0] == CHAR_COMMENT_START)
+			{
+				continue;
+			} 
+			else if(strs[0][0] == CHAR_VARS_START)
+			{
+				continue;
+			} 
+			else 
+			{
+				object obj = Activator.CreateInstance(type); 
+				((PropertyReader)obj).parse(strs);
+			}
+		}
+	}
+	
+	public static void copyFolder(string sourceFolderName,string desFolderName,List<string> fileNames)
+	{
+		if(!Directory.Exists(desFolderName))
+		{
+			Directory.CreateDirectory (desFolderName);
+		}
+		string[] files = Directory.GetFiles (sourceFolderName);
+		for (int k = 0; k < files.Length; k++) {
+			string file = files [k];
+			string fileName = Path.GetFileName (file);
+			if(fileNames.Contains(fileName))
+			{
+				File.Copy (file, desFolderName + fileName, true);
+				GameLogger.Log (fileName);
+			}
+		}
+	}
+	
+	//==请注意在Android中,这些文件被打包成一个.jar形式（也是标准的zip格式文件）的压缩包.这意味着如果你不使用Unity的WWW类来获取文件,就必须要用额外的软件来打开.jar文件并获取资源==//
+	public static void copyFolderForAndroid(string sourceFolderName,string desFolderName,List<string> fileNames)
+	{
+		if(!Directory.Exists(desFolderName))
+		{
+			Directory.CreateDirectory(desFolderName);
+		}
+		for (int k = 0; k < fileNames.Count; k++) {
+			string fileName = fileNames [k];
+			WWW www = new WWW (sourceFolderName + fileName);
+			while(!www.isDone)
+			{
+				Thread.Sleep(1);
+			}
+			if(www.error==null)
+			{
+				byte[] b = www.bytes;
+
+				if (File.Exists (desFolderName + fileName)) {
+					File.Delete(desFolderName+fileName);
+				}
+
+				using (FileStream fs = new FileStream (desFolderName + fileName, FileMode.Create)) {
+					fs.Seek(0,SeekOrigin.Begin);
+					fs.Write(b,0,b.Length);
+					fs.Close();
+				}
+			}
+			else
+			{
+				GameLogger.LogError("error ===== " + www.error);
+			}
+			www.Dispose ();
+		}
+	}
+
+	public static IEnumerator downLoadFile(string remotePath,string localPath,FileDownloadReturn fdr)
+	{
+		GameLogger.Log("准备下载:"+remotePath);
+
+		WWW www=new WWW(remotePath);
+		yield return www;
+		if(www.error!=null)
+		{
+			GameLogger.Log(www.error+":"+remotePath);
+			fdr.downloadReturn (false);
+		}
+		else
+		{
+			byte[] b = www.bytes;
+
+			//文件存放目标路径
+			int index = localPath.LastIndexOf ("/");
+			string path = localPath.Substring (0, index);
+
+			if (Directory.Exists (path)) {
+				clearSameName (localPath);
+			} else {
+				Directory.CreateDirectory (path);
+				GameLogger.Log ("创建路径:" + path, Color.yellow);
+			}
+
+			using (FileStream fs = new FileStream (localPath, FileMode.Create, FileAccess.ReadWrite)) {
+				fs.Seek(0,SeekOrigin.Begin);
+				fs.Write(b,0,b.Length);
+				fs.Close();
+				fdr.downloadReturn (true);
+				GameLogger.Log("下载完成:"+remotePath);
+			}
+		}
+		www.Dispose ();
+	}
+
+	private static void clearSameName(string path)
+	{
+		//删除同名文件
+		if (File.Exists (path)) {
+			File.Delete (path);
+		}
+		//删除同名目录,按照OS的命名规则,文件名和目录名是不一样的
+		if (Directory.Exists (path)) {
+			Directory.Delete (path);
+		}
+	}
+}
+
+public class FileDownloadReturn
+{
+	public bool success;
+
+	public void downloadReturn (bool success)
+	{
+		this.success = success;
+	}
+
+	public bool isDownloadSuccess()
+	{
+		return success;
+	}
+
+	public static FileDownloadReturn create()
+	{
+		FileDownloadReturn obj = new FileDownloadReturn ();
+		obj.success = false;
+		return obj;
+	}
+}

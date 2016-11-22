@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2382817342
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: aeee4aba647b1504618943d26872b042
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 6759894fca659e2049f05064db45ce61
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/_BundleResources/Model/zhangaiwu.fbm/zhangaiwu.png
+Dependencies: []

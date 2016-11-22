@@ -1,0 +1,39 @@
+﻿using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+
+public class LoginScene : BaseScene {
+
+	public InputField usernameField;
+	public InputField passwordField;
+	public Button loginBtn;
+
+	// Use this for initialization
+	protected override void start ()
+	{
+		base.start ();
+		usernameField.text = Util.getPlayerPrefs (Constant.Username);
+		passwordField.text = Util.getPlayerPrefs (Constant.Password);
+		loginBtn.onClick.AddListener (onClickLogin);
+	}
+
+	private void onClickLogin()
+	{
+		string username = usernameField.text;
+		string password = passwordField.text;
+		if (string.IsNullOrEmpty (username) || string.IsNullOrEmpty (password)) {
+			showPopWarn ("账号或密码填写有误！", null);
+			return;
+		}
+		bool connectSuccess = GameManager.instance.openTcpService ();
+		if (!connectSuccess) {
+			showPopWarn ("连不上服务器", null);
+			return;
+		}
+
+		Message_Login.create (MsgType.Login, username, password).send ();
+		Util.setPlayerPrefs (Constant.Username, username);
+		Util.setPlayerPrefs (Constant.Password, password);
+	}
+
+}

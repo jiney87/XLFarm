@@ -1,0 +1,109 @@
+ManifestFileVersion: 0
+CRC: 1254624247
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: ui/common
+      Dependencies: {}
+    Info_1:
+      Name: model/huojian
+      Dependencies:
+        Dependency_0: model/materials/huojian
+    Info_2:
+      Name: model/jiahao
+      Dependencies:
+        Dependency_0: model/materials/fuhao
+    Info_3:
+      Name: model/jianhao
+      Dependencies:
+        Dependency_0: model/materials/fuhao
+    Info_4:
+      Name: model/tianshi
+      Dependencies:
+        Dependency_0: model/materials/tianshi
+    Info_5:
+      Name: model/zhangaiwu
+      Dependencies:
+        Dependency_0: model/materials/zhangaiwu
+    Info_6:
+      Name: model/huojian.fbm/huojian
+      Dependencies: {}
+    Info_7:
+      Name: model/jiahao.fbm/fuhao
+      Dependencies: {}
+    Info_8:
+      Name: model/jianhao.fbm/fuhao
+      Dependencies: {}
+    Info_9:
+      Name: model/materials/fuhao
+      Dependencies:
+        Dependency_0: model/jiahao.fbm/fuhao
+    Info_10:
+      Name: model/materials/huojian
+      Dependencies:
+        Dependency_0: model/huojian.fbm/huojian
+    Info_11:
+      Name: model/materials/tianshi
+      Dependencies:
+        Dependency_0: model/tianshi.fbm/tianshi
+    Info_12:
+      Name: model/materials/zhangaiwu
+      Dependencies:
+        Dependency_0: model/zhangaiwu.fbm/zhangaiwu
+    Info_13:
+      Name: model/tianshi.fbm/tianshi
+      Dependencies: {}
+    Info_14:
+      Name: model/zhangaiwu.fbm/zhangaiwu
+      Dependencies: {}
+    Info_15:
+      Name: prefab/3d/pathitem/huojian
+      Dependencies:
+        Dependency_0: model/huojian
+        Dependency_1: model/materials/huojian
+    Info_16:
+      Name: prefab/3d/pathitem/jiahao
+      Dependencies:
+        Dependency_0: model/jiahao
+        Dependency_1: model/materials/fuhao
+    Info_17:
+      Name: prefab/3d/pathitem/jianhao
+      Dependencies:
+        Dependency_0: model/jianhao
+        Dependency_1: model/materials/fuhao
+    Info_18:
+      Name: prefab/3d/pathitem/tianshi
+      Dependencies:
+        Dependency_0: model/tianshi
+        Dependency_1: model/materials/tianshi
+    Info_19:
+      Name: prefab/3d/pathitem/zhangaiwu
+      Dependencies:
+        Dependency_0: model/zhangaiwu
+        Dependency_1: model/materials/zhangaiwu
+    Info_20:
+      Name: prefab/3d/useitem/huojian
+      Dependencies:
+        Dependency_0: model/huojian
+        Dependency_1: model/materials/huojian
+    Info_21:
+      Name: prefab/3d/useitem/jiahao
+      Dependencies:
+        Dependency_0: model/jiahao
+        Dependency_1: model/materials/fuhao
+    Info_22:
+      Name: prefab/3d/useitem/jianhao
+      Dependencies:
+        Dependency_0: model/jianhao
+        Dependency_1: model/materials/fuhao
+    Info_23:
+      Name: prefab/3d/useitem/tianshi
+      Dependencies:
+        Dependency_0: model/tianshi
+        Dependency_1: model/materials/tianshi
+    Info_24:
+      Name: ui/item
+      Dependencies: {}
+    Info_25:
+      Name: ui/skill
+      Dependencies: {}

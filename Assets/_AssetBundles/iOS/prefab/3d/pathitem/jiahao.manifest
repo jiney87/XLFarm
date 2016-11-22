@@ -1,0 +1,40 @@
+ManifestFileVersion: 0
+CRC: 1271528373
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 89e04e778c51de6f9fd802ddb09be041
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 8dedc3bac2ba993536da100f7edc6a1a
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6a212c74133714b2ea82d7543dcbeca6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e7b32286031b36f4da76494f77df398a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8e1656f7522666a409daa6ce03973af3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d1a704be08f8ae04fbf4d30597be86f6, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/_BundleResources/Prefab/3D/PathItem/jiahao.prefab
+Dependencies:
+- Assets/_AssetBundles/iOS/model/jiahao
+- Assets/_AssetBundles/iOS/model/materials/fuhao

@@ -1,0 +1,27 @@
+ManifestFileVersion: 0
+CRC: 1516751344
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f5cf38ab2158e51492a6351011ac6e1a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f47d2e78a642f6f4f52d67f76b4957c4
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+Assets:
+- Assets/_BundleResources/Model/huojian.FBX
+Dependencies:
+- Assets/_AssetBundles/iOS/model/materials/huojian

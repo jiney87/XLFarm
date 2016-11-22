@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 2642113451
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 88c4f922e83e05e943b1f8b0d32b2593
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9dea23ffc7e96552740e12d1ee5309d8
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/_BundleResources/UI/Skill/1004.png
+- Assets/_BundleResources/UI/Skill/1005.png
+- Assets/_BundleResources/UI/Skill/1001.png
+- Assets/_BundleResources/UI/Skill/1003.png
+- Assets/_BundleResources/UI/Skill/1006.png
+- Assets/_BundleResources/UI/Skill/cover.png
+- Assets/_BundleResources/UI/Skill/1007.png
+- Assets/_BundleResources/UI/Skill/1002.png
+Dependencies: []

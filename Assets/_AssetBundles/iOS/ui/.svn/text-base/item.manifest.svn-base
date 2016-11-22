@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 2411559833
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 869f3af7ee969107f2f6f50a63ac4be3
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9dea23ffc7e96552740e12d1ee5309d8
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/_BundleResources/UI/Item/item_jiahao.png
+- Assets/_BundleResources/UI/Item/item_huojian.png
+- Assets/_BundleResources/UI/Item/item_tianshi.png
+- Assets/_BundleResources/UI/Item/item_jianhao.png
+Dependencies: []

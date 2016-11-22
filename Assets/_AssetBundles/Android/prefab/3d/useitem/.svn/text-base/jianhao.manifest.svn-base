@@ -1,0 +1,38 @@
+ManifestFileVersion: 0
+CRC: 1922671439
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 417b8ea2c0cdaf6f9f43c77b4d124512
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 7d969df721ffbeab9e294bc0c62a93b7
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: e7b32286031b36f4da76494f77df398a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 32c09c07bda44a443ab24a5f534427c3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d6d63ebb83c65454db7adb46b2df7c8a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0ef0d46f517700248ab4d519ae3f45e0, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/_BundleResources/Prefab/3D/UseItem/jianhao.prefab
+Dependencies:
+- Assets/_AssetBundles/Android/model/jianhao
+- Assets/_AssetBundles/Android/model/materials/fuhao
